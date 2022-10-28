@@ -21,10 +21,10 @@ class RPS:
         user = str
         
         if computer_choice == user_choice:
-            print ('Both players chose the same option. Try again!')
-        elif (computer_choice == "Rock" and user_choice == "Scissors") or \
-            (computer_choice == "Paper" and user_choice == "Rock") or \
-            (computer_choice == "Scissors" and user_choice == "Paper"):
+            print('Draw! Both players chose the same option')
+        elif (computer_choice == "rock" and user_choice == "scissors") or \
+            (computer_choice == "paper" and user_choice == "rock") or \
+            (computer_choice == "scissors" and user_choice == "paper"):
             winner = computer
             print(f'The computer chose {computer_choice}. The computer wins')
         else:
