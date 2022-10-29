@@ -23,15 +23,19 @@ Using "Teachable Machine" to create a dataset with 4 different classes: "Rock, P
 Below, you can see pictures taken that represent each of the different classes:
 
 Rock
+
 ![Rock 1][(https://user-images.githubusercontent.com/67421468/198841057-79e60def-b4e9-4787-bd8d-cc33d51601be.png)]
 
 Paper
+
 ![Paper 1](https://user-images.githubusercontent.com/67421468/198841109-60ce89eb-75a6-4ee7-b1e8-1dd922e5f051.png)
 
 Scissors
+
 ![Scissors 1](https://user-images.githubusercontent.com/67421468/198841123-62cac48f-5281-4fd2-a79d-ed4c11eb65cd.png)
 
 Nothing
+
 ![Nothing](https://user-images.githubusercontent.com/67421468/198841141-baf63f3f-85ca-4c21-8438-a8893f2284aa.png)
 
 
@@ -42,12 +46,15 @@ In order to try and ensure that the model is as accurate as possible, 2 main fac
 Below, there are images to demonstrate these 2 factors:
 
 Left vs Right:
+
 ![Right Rock vs Left Rock (2)](https://user-images.githubusercontent.com/67421468/198841170-121f4a0f-ac11-4550-9e47-b7ebc3c152e7.png)
 
 Setting:
+
 ![Setting (2)](https://user-images.githubusercontent.com/67421468/198841177-44e7131d-11e4-41c8-9f59-bf6a00342e22.png)
 
 After taking 210 images for each class (It is recommended to take sufficient images in order to improve the quality of the model), the model was then trained by clicking the "Train model" button under the "Training" section. Once the model is trained the output can be tested under the "Preview" section.
+
 
 ![Teachable Machine](https://user-images.githubusercontent.com/67421468/198841187-b8cf4106-3124-4534-a2fd-ad9e98210ed6.png)
 
@@ -89,6 +96,7 @@ Below are the features:
     get_winner(computer_choice, user_choice, winner) - returns the winner.
 
 Within the get_winner method, the logic of the game has been created with the use of if-elif-else statements. The statements are as follows:
+
 ![manual rps logic](https://user-images.githubusercontent.com/67421468/198841221-5e5c3935-1a31-4a10-8d08-944f0f015a1c.png)
 
 ## Creating the camera version
