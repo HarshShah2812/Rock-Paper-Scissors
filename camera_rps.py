@@ -71,6 +71,8 @@ class RPS:
             cv2.waitKey(1000)
             print(f"{timer}")
             self.countdown -= 1
+            if self.countdown == 0:
+                print("Show your choice NOW!!")
     
     def get_computer_choice(self):
         self.options = ["Rock", "Paper", "Scissors"]
