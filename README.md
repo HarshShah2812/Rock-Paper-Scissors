@@ -24,7 +24,7 @@ Below, you can see pictures taken that represent each of the different classes:
 
 Rock
 
-![Rock 1][(https://user-images.githubusercontent.com/67421468/198841057-79e60def-b4e9-4787-bd8d-cc33d51601be.png)]
+![Rock 1](https://user-images.githubusercontent.com/67421468/198841057-79e60def-b4e9-4787-bd8d-cc33d51601be.png)
 
 Paper
 
