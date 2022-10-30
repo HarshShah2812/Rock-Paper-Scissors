@@ -55,10 +55,11 @@ Setting:
 
 After taking 210 images for each class (It is recommended to take sufficient images in order to improve the quality of the model), the model was then trained by clicking the "Train model" button under the "Training" section. Once the model is trained the output can be tested under the "Preview" section.
 
-
-![Teachable Machine](https://user-images.githubusercontent.com/67421468/198841187-b8cf4106-3124-4534-a2fd-ad9e98210ed6.png)
+![Preview](https://user-images.githubusercontent.com/67421468/198875026-b92c1b02-6546-4983-95c9-0fe2ea13d1d6.png)
 
 After testing the output, we can export the model by clicking the "Export Model" button on the right-hand side of the page; this will create 2 files corresponding to the dataset, 'keras_model.h5'(the model) and 'labels.txt'(the parameters), which will be essential for us to be able to create the game in Python.
+
+![Teachable Machine](https://user-images.githubusercontent.com/67421468/198841187-b8cf4106-3124-4534-a2fd-ad9e98210ed6.png)
 
 ## Setting up the environment
 
