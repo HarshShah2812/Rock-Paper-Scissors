@@ -117,7 +117,7 @@ However, in order to be able to involve the webcam in the game, this code alone 
 
 ### Additional methods used
 
-In a regular game, you usually count down to zero, and at that point you show your hand. As a result, in order to make the game as close to real life as possible, I have also created a get_countdown method. This slows down the machine to provide a more user_friendly experience, asking the user to prepare to show their hand.
+In a regular game, you usually count down to zero, and at that point you show your hand. As a result, in order to make the game as close to real life as possible, I have also created a get_countdown method. However, unlike the other methods, I have created this as a "static method", as it is bound only to the class, and doesn't access any of its properties. This method slows down the machine to provide a more user_friendly experience, asking the user to prepare to show their hand.
 
 ![get_countdown](https://user-images.githubusercontent.com/67421468/198841253-4248b1dd-fdd9-40a3-be34-2e52e1edb2e0.png)
 
