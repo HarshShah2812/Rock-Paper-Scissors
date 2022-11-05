@@ -59,48 +59,49 @@ class RPS:
         self.model = load_model('keras_model.h5')
         self.cap = cv2.VideoCapture(0)
         self.data = np.ndarray(shape = (1, 224, 224, 3), dtype = np.float32)
+        self.options_list = ["Rock", "Paper", "Scissors", "Nothing"]
         self.computer_wins = 0
         self.user_wins = 0
 
-    def get_countdown(self):
+
+    @staticmethod
+    def get_countdown():
         print("Show your choice in...")
-        self.countdown = 3
-        while self.countdown > 0:
-            self.minute, sec = divmod(self.countdown, 60)
+        countdown = 3
+        while countdown > 0:
+            minute, sec = divmod(countdown, 60)
             timer = f"{sec}"
             cv2.waitKey(1000)
             print(f"{timer}")
-            self.countdown -= 1
-            if self.countdown == 0:
+            countdown -= 1
+            if countdown == 0:
                 print("Show your choice NOW!!")
     
     def get_computer_choice(self):
-        self.options = ["Rock", "Paper", "Scissors"]
-        self.computer_choice = random.choice(self.options)
-        return self.computer_choice
+        computer_choice = random.choice(self.options_list[0:3])
+        return computer_choice
     
     def get_camera(self):
-        self.end_time = time.time() + 3
-        while self.end_time > time.time():
-            self.ret, frame = self.cap.read()
+        end_time = time.time() + 3
+        while end_time > time.time():
+            ret, frame = self.cap.read()
             resized_frame = cv2.resize(frame, (224, 224), interpolation = cv2.INTER_AREA)
             image_np = np.array(resized_frame)
-            self.normalized_image = (image_np.astype(np.float32) / 127.0) - 1
+            normalized_image = (image_np.astype(np.float32) / 127.0) - 1
             cv2.imshow('frame', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-        return self.normalized_image
+        return normalized_image
     
     def get_prediction(self):
         self.data[0] = self.get_camera()
-        self.prediction = self.model.predict(self.data) 
-        return self.prediction
+        prediction = self.model.predict(self.data) 
+        return prediction
         
     def get_user_choice(self):
-        self.prediction = self.get_prediction()
-        self.options_list = ["Rock", "Paper", "Scissors", "Nothing"]
-        self.user_choice = self.options_list[np.argmax(self.prediction[0])]
-        return self.user_choice   
+        prediction = self.get_prediction()
+        user_choice = self.options_list[np.argmax(prediction[0])]
+        return user_choice   
     
     def get_winner(self, computer_choice, user_choice): 
         if computer_choice == user_choice:
